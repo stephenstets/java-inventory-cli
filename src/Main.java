@@ -20,15 +20,15 @@ public class Main {
     private static final String HELP =
             """
             Commands:
-              add     — add a new item (prompts for each field)
-              list    — show everything in stock
-              find <text> — search by name
-              set <id> <qty> — set an item's quantity
-              del <id> — remove an item
-              low     — show items at or below their reorder level
-              value   — total inventory value
-              help    — this list
-              quit    — save and exit
+              add     - add a new item (prompts for each field)
+              list    - show everything in stock
+              find <text> - search by name
+              set <id> <qty> - set an item's quantity
+              del <id> - remove an item
+              low     - show items at or below their reorder level
+              value   - total inventory value
+              help    - this list
+              quit    - save and exit
             """;
 
     private final Inventory inventory;
@@ -52,7 +52,7 @@ public class Main {
     }
 
     private void run() {
-        System.out.println("Maker inventory — type 'help' for commands.");
+        System.out.println("Maker inventory - type 'help' for commands.");
         while (true) {
             System.out.print("> ");
             String line = in.nextLine().trim();
@@ -77,12 +77,12 @@ public class Main {
                         System.out.println("Saved. Goodbye.");
                         return;
                     }
-                    default -> System.out.println("Unknown command — type 'help'.");
+                    default -> System.out.println("Unknown command - type 'help'.");
                 }
             } catch (IOException e) {
                 System.err.println("Could not save: " + e.getMessage());
             } catch (NumberFormatException e) {
-                System.err.println("That number didn't parse — try again.");
+                System.err.println("That number didn't parse - try again.");
             }
         }
     }
@@ -109,7 +109,7 @@ public class Main {
     private void doList() {
         List<InventoryItem> all = inventory.all();
         if (all.isEmpty()) {
-            System.out.println("(empty — use 'add' to put something in stock)");
+            System.out.println("(empty - use 'add' to put something in stock)");
             return;
         }
         all.forEach(System.out::println);
@@ -172,9 +172,9 @@ public class Main {
         while (true) {
             String s = in.nextLine().trim();
             if (s.isEmpty()) {
-                System.out.print("Can't be empty — try again: ");
+                System.out.print("Can't be empty - try again: ");
             } else if (s.contains(",")) {
-                System.out.print("No commas, please — try again: ");
+                System.out.print("No commas, please - try again: ");
             } else {
                 return s;
             }

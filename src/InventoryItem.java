@@ -4,7 +4,7 @@ import java.util.Locale;
  * One thing in stock: a filament roll, a finished product, or a supply.
  *
  * <p>Items are stored one-per-line in a CSV file (see {@link Inventory}).
- * Fields never contain commas in this app — names are validated on input —
+ * Fields never contain commas in this app - names are validated on input -
  * so a plain split on commas is a safe, dependency-free format.</p>
  */
 public class InventoryItem {

@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * The in-memory inventory, backed by a CSV file on disk.
  *
  * <p>Load once at startup ({@link #load()}), save after every change
- * ({@link #save()}). No database, no dependencies — the file is the
+ * ({@link #save()}). No database, no dependencies - the file is the
  * database, and it opens in any spreadsheet app.</p>
  */
 public class Inventory {
